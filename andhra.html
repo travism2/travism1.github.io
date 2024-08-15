@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sikkim.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Anhra Pradesh</title>
+    <style>
+        .tab-contents {
+            font-size: 20px;
+            font-family: "Times New Roman", Times, serif;
+            padding: 40px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .logo {
+            width: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .welcome {
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            padding-bottom: 20px;
+        }
+        .payment {
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 60px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <h1>ANDHRA PRADESH</h1>
+    </div>
+    <section>
+        <header>
+            <div class="header">
+                <div class="container">
+                    <span class="slider" id="slider1"></span>
+                    <span class="slider" id="slider2"></span>
+                    <span class="slider" id="slider3"></span>
+                    <span class="slider" id="slider4"></span>
+                    <span class="slider" id="slider5"></span>
+
+                    <div class="imgContainer">
+                        <div class="slide_div" id="slide_1">
+                            <img src="https://www.holidify.com/images/tooltipImages/ANDHRA-PRADESH.jpg" class="img" id="img1" />
+                            <a href="#slider1" class="button" id="button1"></a>
+                        </div>
+                        <div class="slide_div" id="slide_2">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/Lepakshi_10th-jan.jpg" class="img" id="img2" />
+                            <a href="#slider2" class="button" id="button2"></a>
+                        </div>
+                        <div class="slide_div" id="slide_3">
+                            <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/08/18071344/Andhra-Pradesh-5.png" class="img" id="img4" />
+                            <a href="#slider4" class="button" id="button4"></a>
+                        </div>
+                        <div class="slide_div" id="slide_5">
+                            <img src="https://travel-blog.waytoindia.com/wp-content/uploads/2020/07/Srisailam.jpg" class="img" id="img5" />
+                            <a href="#slider5" class="button" id="button5"></a>
+                        </div>
+
+                        <div class="slide_div" id="slide_5">
+                            <img src="https://images.delhimetrotimes.in/photos/images/andhra-pradesh-tourism.jpg" class="img" id="img5" />
+                            <a href="#slider5" class="button" id="button5"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="GUIDE">
+                <h2><center>Guide1:Krishn Kulkarni</center></h2>
+                <h2>  <center>    Guide2:Radha Kulkarni</center></h2>
+                <center><img src="https://img.freepik.com/premium-photo/man-model-photo-ai-generated_980993-2136.jpg" class="img" id="img5" />
+                <img src="https://m.economictimes.com/thumb/msid-96622207,width-1200,height-900,resizemode-4,imgsize-17564/ai-women.jpg" class="img" id="img5" /></center>
+                <br>
+                <h2><center>Doctor1:Sukumar Nandigoudar  </center></h2>  <h2><center> Doctor2:Anita ABndurgee</center></h2>
+                <center><img src="https://img.freepik.com/premium-photo/man-doctor_112763-185.jpg" class="img" id="img5" />
+                    <img src="https://img.freepik.com/premium-photo/cute-doctor-woman-photo-ai-generated_980993-3006.jpg" class="img" id="img5" /></center>
+              </div>
+              <div class="payment">
+                <center><a href="payment1.html">PAYMENT</a></center></div>
+            <div class="welcome">
+                <h1>ANDHRA PRADESH</h1>
+            </div>
+
+            <div class="options">
+                <nav class="content-titles">
+                    <ul>
+                        <li>
+                            <a class="tab-links active-link" onclick="opentab('overview')">Overview</a>
+                        </li>
+                        <li>
+                            <a class="tab-links" onclick="opentab('best-time-to-visit')">Best Time to Visit</a>
+                        </li>
+                        <li>
+                            <a class="tab-links" onclick="opentab('how-to-reach')">How to Reach</a>
+                        </li>
+                        <li>
+                            <a class="tab-links" onclick="opentab('places-to-visit')">Places to Visit</a>
+                        </li>
+                        <li>
+                            <a class="tab-links" onclick="opentab('things-to-do')">Things to Do</a>
+                        </li>
+                        <li><a class="tab-links" onclick="opentab('map')">Map</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-contents active-tab" id="overview" style="background-color: #d0f6cf">
+                    <h2>About <span>ANDHRA PRADESH</span></h2>
+                    <br />
+                    <p>
+                        Andhra Pradesh, located on the southeastern coast of India, is known for its rich cultural heritage and natural beauty.
+                    </p>
+                    <br />
+                    <p>
+                        Odisha is blessed with a varied landscape and consists of hills,
+                        rivers, beaches and sea, making it a popular point of interest for
+                        the tourists. Its forests make the perfect home for a number of
+                        wildlife such as Tigers, Elephants, Black Panthers, Macaque, Bear,
+                        Gharial, Chital and the Sambar Deer. The architecture of Odisha is
+                        another reason to fall in love with the state with several
+                        historic structures adorned with intricate carvings like the famed
+                        Sun Temple of Konark, which became the inspiration for the Stone
+                        Chariot at Hampi. Not just rich in history, Odisha is also rich
+                        with minerals. An important hub for India, the state has reserves
+                        of Iron ore, Bauxite, Chromite, Manganese ore, Coal, Limestone,
+                        Graphite, Gold, Gemstone, Diamond, among others. It is indeed true
+                        that words cannot express the beauty of Odisha. Home to one of the
+                        four sacred Hindu pilgrimages, the state will satiate the
+                        curiosity of a traveler who is curious to learn about the elements
+                        that paint its canvas.
+                    </p>
+                </div>
+
+                <div class="tab-contents" id="best-time-to-visit" style="background-color: #dcbfff">
+                    <h2>Best Time to Visit in <span>ANDHRA PRADESH</span></h2>
+                    <br />
+                    <h3>Summer in ANDHRA-PRADESH</h3>
+                    <p>
+                        Summer season in Odisha starts from April and lasts till June.
+                        During this, Odisha remains hot and humid with temperature
+                        lingering between 24°C - 35°C. However, if you are up to plan your
+                        trip during the summer season to experience the scorching heat of
+                        Odisha for a unique experience then you can go ahead as the
+                        evenings are quite pleasant and one can think of planning a visit
+                        in summer season in Odisha. In fact, summer is a good time to
+                        enjoy and celebrate festivals like Chandan Yatra, Maha Vishuva
+                        Sankranti, Raja Praba and Rath Yatra
+                    </p>
+                    <br />
+                    <h3>Monsoon in Andhra Pradesh</h3>
+                    <p>
+                        Monsoon season in Odisha begins from the month of July and lasts
+                        till September. People of Odisha wait for the arrival of the
+                        monsoon as the state expect heavy rains lasting till September
+                        which enhances the beauty of Odisha, making it more green and
+                        alluring. If you are up to experience the incessant rain of Odisha
+                        then go ahead planning a trip by seeking travel advice that would
+                        help you cover everything from the scratch.
+                    </p>
+                    <br />
+                    <h3>Winter in Andhra Pradesh</h3>
+                    <p>
+                        Winters between October and February is the most suitable to get
+                        around Odisha and explore the beautiful state. The weather is
+                        cool, pleasant and perfect with 10°C. Visiting Odisha during the
+                        winter season you would witness the lush greenery all around and
+                        will have the opportunity to reminisce the scintillating views.
+                        The pleasant weather of the season would allow you to make the
+                        most out of your trip to Odisha where you can roam around the
+                        temples easily. If you are a nature lover, then Odisha will
+                        provide you with a lifetime experience where you can witness the
+                        migratory birds.
+                    </p>
+                </div>
+                <div class="tab-contents" id="how-to-reach" style="background-color: #f1f5a8">
+                    <h2>How to Reach <span>Andhra Pradesh</span></h2>
+                    <br />
+                    <p>
+                        Odisha is that destination of India which gives you those memories
+                        which are hard to forget. This Indian state is well connected by
+                        air, rail and road to various other major cities of India, so
+                        reaching there would be hustle free. No matter in which state or
+                        for that matter, in which country you are in the world, reaching
+                        Odisha will never be difficult. To have a memorable experience one
+                        should choose the best alternative of travelling to Odisha and
+                        explore India in every manner be it from air or road or even while
+                        travelling through rail.
+                    </p>
+                    <br />
+                    <h3>By Air:</h3>
+                    <p>
+                        Odisha has that one airport which is well connected to various
+                        nations of the world. Biju Patnaik International Airport is
+                        located in the capital city of Odisha and a world-based
+                        connectivity. Other than this, the Indian state has domestic as
+                        well as private airports. The state also has a domestic airport
+                        which is used for commercial purpose also, popularly known as
+                        Jharsuguda Airport. Airways is actually the best alternative to
+                        reach anywhere and reaching Odisha on time gives you rather more
+                        time to explore the gorgeous state.
+                    </p>
+                    <br />
+                    <h3>By Road:</h3>
+                    <p>
+                        Reaching Odisha by road is quite a challenge yet an interesting
+                        one. The one who loves long drives surely will enjoy the national
+                        highways, long drives and beautiful roads. Also reaching Odisha is
+                        quite easy as the state has well road connectivity and access to
+                        various nearby cities. But for those who do not drive or don’t
+                        want to drive, the next best alternative is to board the buses
+                        which ply from various cities of India. These buses could be
+                        private or run by the government for establishing and maintaining
+                        a good connectivity with various states.
+                    </p>
+                    <br />
+                    <h3>By Rail:</h3>
+                    <p>
+                        Travelling by trains gives one the advantage of witnessing the
+                        actual rustic India and enjoy the beauty. Odisha homes the
+                        highest-revenue earning railway station- Bhubaneswar Railway
+                        Station which is connected to various other Indian states. Also
+                        the major trains which ply on this route are Konark Express,
+                        Rajdhani and Coromandel Express make it rather very convenient for
+                        the travellers as the railway station is based in the capital city
+                        of Odisha..
+                    </p>
+                </div>                 
+                <div class="tab-contents" id="places-to-visit" style="background-color: #f7ded0">
+                    <h2>Places to visit in <span>ANDHRA-PRADESH</span></h2>
+                    <br />
+                    <h3>Andhra Pradesh- The Land of Unique Temples</h3>
+                    <p>
+                        1. Tirupati
+Review: Tirupati is home to the famous Tirumala Venkateswara Temple, one of the most visited pilgrimage centers in the world. The temple, dedicated to Lord Venkateswara, attracts millions of devotees annually. The town also offers other attractions like Talakona Waterfalls and Sri Venkateswara National Park.
+Highlights: Spiritual ambiance, beautiful architecture, natural scenery.<br>
+2. Araku Valley
+Review: Araku Valley is a picturesque hill station known for its coffee plantations, lush greenery, and pleasant climate. The scenic train journey from Visakhapatnam to Araku Valley through tunnels and over bridges is a major attraction.
+Highlights: Borra Caves, Ananthagiri Hills, Tribal Museum.<br>
+3. Visakhapatnam (Vizag)
+Review: Visakhapatnam is a coastal city known for its beautiful beaches, such as Ramakrishna Beach and Rishikonda Beach. The city also offers historical sites like the INS Kursura Submarine Museum and the ancient Simhachalam Temple.
+Highlights: Beaches, museums, temples, scenic views.<br>
+4. Vijayawada
+Review: Vijayawada, located on the banks of the Krishna River, is known for its historic temples and vibrant culture. The Kanaka Durga Temple is a major pilgrimage site, and the city also offers attractions like Prakasam Barrage and Bhavani Island.
+Highlights: Religious sites, river views, cultural attractions.<br>
+5. Amaravati
+Review: Amaravati is an ancient town with a rich Buddhist heritage. The Amaravati Stupa is a significant archaeological site, and the town also features the modern-day Amaravati capital region, which is being developed as a smart city.
+Highlights: Historical significance, Buddhist sites, modern infrastructure.<br>
+6. Lepakshi
+Review: Lepakshi is renowned for its stunning Veerabhadra Temple, which showcases remarkable Vijayanagara architecture. The temple complex features intricate carvings, frescoes, and the famous hanging pillar.
+Highlights: Architectural marvels, historical significance, cultural heritage.<br>
+7. Srikalahasti
+Review: Srikalahasti is famous for the Srikalahasti Temple, dedicated to Lord Shiva. The temple is an important pilgrimage site, especially for those seeking remedies for doshas related to Rahu and Ketu.
+Highlights: Religious significance, temple architecture, spiritual ambiance.<br>
+8. Rajahmundry
+Review: Rajahmundry, situated on the banks of the Godavari River, is known for its picturesque landscapes and cultural heritage. The Godavari Pushkaralu, a festival held once every 12 years, attracts millions of pilgrims.
+Highlights: River views, cultural events, temples.<br>
+9. Gandikota
+Review: Often referred to as the "Grand Canyon of India," Gandikota offers breathtaking views of the Pennar River gorge. The Gandikota Fort, with its historical significance and scenic surroundings, is a must-visit.
+Highlights: Natural beauty, historical fort, panoramic views.<br>
+10. Nagarjuna Sagar
+Review: Nagarjuna Sagar, home to one of the world's largest masonry dams, is a popular tourist destination. The Nagarjuna Sagar Dam and the nearby Nagarjunakonda island, with its Buddhist relics, are key attractions.
+Highlights: Engineering marvel, scenic beauty, historical sites.
+These destinations offer a blend of spiritual, historical, and natural attractions, making Andhra Pradesh a diverse and fascinating place to explore.
+                    <br />
+                    
+                </div>
+                <div class="tab-contents" id="things-to-do" style="background-color: #e5e1da">
+                    <h2>Things to do in <span>ANDHRA-PRADESH</span></h2>
+                    <br />
+                    <p>
+                    <ul>
+                        <li>Try jet skiing, parasailing, or speed boating at the Puri Beach</li>
+                        <li>Boat among the mangrove forests in the Bhitarkanika National Park and view the crocodiles at
+                            the Park</li>
+                        <li>Visit the Kalijai Temple, Satapada Dolphin Sanctuary and boat around in Chilika Lake, the
+                            largest saltwater lake in India</li>
+                        <li>Explore the Panch Pandav Caves and the Gupteshwar Caves</li>
+                        <li>Visit the Badaghagara Waterfall, Duduma Waterfall, and the Khandadhar Waterfall</li>
+                        <li>Check out Odisha's traditional handicrafts from the villages of Raghurajpur and Pipili</li>
+                        <li>Check out the regional cuisine and the many sweets of Odisha</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="tab-contents" id="map" style="width: 1000px; height: 400px"></div>
+            </div>
+        </header>
+    </section>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+                if (tabcontent.id === tabname) {
+                    tabcontent.classList.add("active-tab");
+                }
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+
+        // Creating map options
+        var mapOptions = {
+            center: [27.2134142, 88.6797401],
+            zoom: 9,
+        };
+
+        // Creating a map object
+        var map = new L.map("map", mapOptions);
+
+        // Creating a Layer object
+        var layer = new L.TileLayer(
+            "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        );
+
+        // Adding layer to the map
+        map.addLayer(layer);
+
+        // Creating a marker
+        var marker = L.marker([19.814151167621585, 85.82949525688159]).addTo(map);
+        var marker = L.marker([20.46475930011713, 85.87998434214671]).addTo(map);
+        var marker = L.marker([21.467836944064093, 83.97940522819161]).addTo(map);
+        var marker = L.marker([20.297000858738954, 85.81495552732623]).addTo(map);
+        var marker = L.marker([19.89222570283024, 86.09043353473201]).addTo(map);
+        var marker = L.marker([19.315854632617057, 84.79520956578807]).addTo(map);
+        var marker = L.marker([22.260268954608954, 84.84680700178832]).addTo(map);
+    </script>
+</body>
+
+</html>
